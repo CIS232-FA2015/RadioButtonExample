@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="300.0" minWidth="300.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cis232.classexample.RadioExampleController">
+   <children>
+      <VBox alignment="CENTER" layoutX="166.0" layoutY="14.0" prefHeight="231.0" prefWidth="268.0" AnchorPane.bottomAnchor="155.0" AnchorPane.leftAnchor="166.0" AnchorPane.rightAnchor="166.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <Label fx:id="label" text="Pick one and only one">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="rbChoice1" mnemonicParsing="false" selected="true" text="Choice 1">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <toggleGroup>
+                  <ToggleGroup fx:id="group" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbChoice2" mnemonicParsing="false" text="Choice 2" toggleGroup="$group">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="rbChoice3" mnemonicParsing="false" text="Choice 3" toggleGroup="$group">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </RadioButton>
+            <Button fx:id="button" mnemonicParsing="false" onAction="#buttonClick" text="Click me!">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="98.0" layoutY="241.0" prefHeight="100.0" prefWidth="395.0">
+         <children>
+            <RadioButton mnemonicParsing="false" onAction="#maleClickListener" text="Male">
+               <toggleGroup>
+                  <ToggleGroup fx:id="groupGender" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" onAction="#femaleClickListener" text="Female" toggleGroup="$groupGender">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </RadioButton>
+         </children>
+      </HBox>
+      <Label fx:id="lblGender" layoutX="282.0" layoutY="341.0" />
+   </children>
+</AnchorPane>
